@@ -9,7 +9,7 @@ read_excel("2024.data/20240629/fig1a.xlsx") %>%
             sd_value=sd(value)) %>% 
   ungroup() -> fig1a.dat
 
-pdf(file = "Rplot50.pdf",width = 6,height = 6)
+pdf(file = "2024.data/20240629/fig1a.pdf",width = 6,height = 6)
 ggplot(data=fig1a.dat,aes(x=`Days after tumor inoculation`,y=mean_value))+
   geom_point(aes(color=name),size=5)+
   geom_errorbar(aes(ymin=mean_value,
