@@ -33,5 +33,9 @@ ggplot(data=fig1a.dat,aes(x=`Days after tumor inoculation`,y=mean_value))+
                      label=c("Ctrl"="Ctrl",
                              "Vac"="Vaccine ***"))+
   labs(x="Days after tumor inoculation",
-       y=expression(Tumor~volume~(mm^3)))
+       y=expression(Tumor~volume~(mm^3)))+
+  annotate(geom = "segment",x=10,y=420,xend=10,yend=300,
+           arrow=arrow(angle = 20,type="closed",length = unit(3,'mm')))+
+  annotate(geom = "segment",x=18,y=460,xend=18,yend=350,
+           arrow=arrow(angle = 20,type="closed",length = unit(3,'mm')))
 dev.off()
